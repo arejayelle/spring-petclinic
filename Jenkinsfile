@@ -24,7 +24,7 @@ pipeline {
 
         stage('Deploy') {
             when{ 
-                               branch == 'master'
+                branch 'master'
             }
             steps {
                 echo 'I am deploying because I am on master'
