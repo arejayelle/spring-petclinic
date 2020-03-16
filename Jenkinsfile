@@ -3,19 +3,21 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh './mvnw package'
-
-            }
-        }
-        stage('test') {
-            steps {
-                echo 'I am testing'
+                sh './mvnw clean install'
                 
             }
         }
-        stage('package') {
+        stage('Test') {
             steps {
+                echo 'I am testing'
+                sh './mvnw test'
+                
+            }
+        }
+        stage('Package') {
+            steps {                
                 echo 'I am packaging'
+                sh './mvnw package'
                 
             }
         }
