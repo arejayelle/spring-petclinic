@@ -22,9 +22,14 @@ pipeline {
             }
         }
 
-        stage('deploy') {
+        stage('Deploy') {
+            when{
+                expression{choice == 'master'}
+            }
             steps {
                 echo 'I am deploying because I am on master'
+            
+          )
                 
             }
         }
