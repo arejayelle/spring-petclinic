@@ -28,8 +28,6 @@ pipeline {
             }
             steps {
                 echo 'I am deploying because I am on master'
-            
-          )
                 
             }
         }
